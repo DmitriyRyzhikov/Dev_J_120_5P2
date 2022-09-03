@@ -50,9 +50,9 @@ public class TableDataPreparer {
            } 
         } catch (ArrayIndexOutOfBoundsException ex) {
                 JOptionPane.showMessageDialog(null, 
-                                "The file cannot be converted.Возможно выбран не csv-файл, "
-                                + "либо выбранный файл был создан с нарушением требований "
-                                + "csv стандарта", "Error. File conversion error.",
+                                "The file cannot be converted.It is possible that a non-csv file is selected, "
+                                + "or the selected file was created in violation of the requirements "
+                                + "of the csv standard", "Error. File conversion error.",
 			JOptionPane.ERROR_MESSAGE); }
           return rowData;
     } 
