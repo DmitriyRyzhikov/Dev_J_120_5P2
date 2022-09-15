@@ -1,7 +1,6 @@
 
 package Dev_J120.frames;
 
-import Dev_J120.frames.MainFrame;
 import java.awt.Dimension;
 import java.awt.Font;
 import javax.swing.JFrame;
@@ -23,10 +22,8 @@ public class TableFrame extends JFrame {
         this.rowData = rowData;
         this.columnHeaders = columnHeaders;
 	wdt = this.columnHeaders.length * 150; 
-        initLayoutTable();
-        
-    }
-    
+        initLayoutTable();        
+    }    
     private void initLayoutTable() {
         setBounds(1150, 300, wdt > 900 ? 900 : wdt, 400);
         JTable table = new JTable(rowData, columnHeaders);

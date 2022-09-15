@@ -57,11 +57,11 @@ public class MainFrame extends JFrame{
     public static boolean isCheckBoxCondition() {
         return checkBoxCondition;
     }
-
+*/
     public static String getSeparator() {
         return separator;
     }
-*/    
+    
     private void initComponents(){
         JPanel panel1 = new JPanel();
         JPanel panel2 = new JPanel();
@@ -94,13 +94,13 @@ public class MainFrame extends JFrame{
         separatorCombo.addItemListener((e) -> {
             if (e.getStateChange() == ItemEvent.SELECTED) {
                 switch ((String) e.getItem()){   
-                      case "comma separator":
+                      case "comma":
                            separator = ",";
                            break;
-                      case "colon separator":
+                      case "colon":
                            separator = ":";
                            break;
-                      case "semicolon separator":
+                      case "semicolon":
                            separator = ";";
                            break;      
                 }
@@ -157,7 +157,7 @@ public class MainFrame extends JFrame{
         });
     }   
     private void uploadFile() {
-        JFileChooser filechooser = new JFileChooser("E:\\");   
+        JFileChooser filechooser = new JFileChooser(System.getProperty("user.dir"));   
         filechooser.setFileFilter(new FileNameExtensionFilter("CSV files", "csv"));        
         int ret = filechooser.showDialog(this, "Upload a file");                        
         if (ret == JFileChooser.APPROVE_OPTION) {        
